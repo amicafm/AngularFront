@@ -1,0 +1,28 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<h3>{{titulo}}</h3>
+
+<table>
+    <thead>
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Editar</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas; let i = index;">
+        <td>{{ pessoa.id }}</td>        
+        <td>{{ pessoa.nome }}</td>        
+        <td>{{ pessoa.sobrenome }}</td>
+        <td><a (click)="editar(pessoa.id);">Editar</a></td>
+        <td><a (click)="excluir(pessoa.id, i);">Excluir</a></td>
+        </tr>
+        <tr>
+           <td colspan="6" style="text-align: right;">Total de Registros: {{ pessoas.length }}</td> 
+        </tr>
+    </tbody>
+</table>
+      

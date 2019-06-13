@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<form (ngSubmit)="salvar()">   
+    
+    <br/>
+    <h3>{{titulo}}</h3>
+
+    <label>Código:
+        <input type="input" name="id" size="10" [(ngModel)]="pessoa.id" disabled/>
+    </label><br/><br/>
+
+    <label>Nome:
+        <input type="input" name="nome" size="30" [(ngModel)]="pessoa.nome"/>
+    </label><br/><br/>
+
+    <label>Sobrenome:
+        <input type="input" name="sobrenome" size="30" [(ngModel)]="pessoa.sobrenome"/>
+    </label><br/><br/>
+
+    <button type="submit">Salvar</button>
+</form>
